@@ -1,3 +1,31 @@
-body{
-    background-color:#010d26;
+@import url('https://fonts.googleapis.com/css2?family= Playfair :wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Abril+Fatface & family= Playfair:wght@300 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+  --font01:'Playfair', serif;
+  --font02:'Abril Fatface',cursive,'Playfair', serif;
+
+  --cor01:
+}
+.img{
+    background-image: url(STSCI-H-p1821a-slideshow-2400x1200.jpg);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    border: 20px solid lightgrey;
+}
+div{
+    box-shadow: 5px 5px 6px 2px gray;
+}
+main{
+    background-color: lightyellow;
+    margin: 200px;
+    border-radius: 10px;
+    text-align: center;
 }
