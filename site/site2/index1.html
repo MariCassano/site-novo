@@ -5,43 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCM Astronomy</title>
+    <link rel="icon" type="image/png" href="favicon.ico.png">
     <style>
         body{
-            height: 100vh;
+            margin: 0;
+            justify-content: space-around;
         }
-        
         h1{
             text-align: center;
             display: block;
             margin: auto;
             padding: 450px;
             font-size: 80px;
-            color: #A6411C;
+            color: #ffc3ad;
         }
         .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 200px;
             height: 60px;
             position: relative;
-            z-index:1;
+            z-index: 1;
+            padding-bottom: 30px;
         }
         .circle{
             width: 20px;
             height: 20px;
             position: absolute;
             border-radius: 50%;
-            background-color: #A6411C;
-            left: 15%;
+            background-color: #ffa382;
+            left: 14%;
             transform-origin: 50%;
             animation: circle7124 .5s alternate infinite ease;
         }
+        #terra{
+            background-color:rgb(35, 152, 219);
+        }
+        #marte{
+            background-color: rgb(255, 46, 10);
+        }
+        #jupiter{
+            background-color: rgb(255, 190, 93);
+        }
         @keyframes circle7124 {
-            0%{
-                top: 60px;
-                height: 5px;
-                border-radius: 50px 50px 25px 25px;
-                transform: scaleX(1.7);
-            }
-            40%{
+        0%{
+            top:60px;
+            height: 5px;
+            border-radius:50px 50px 25px 25px;
+            transform: scaleX(1);
+        }
+        40%{
                 height: 20px;
                 border-radius: 50%;
                 transform: scaleX(1);
@@ -94,18 +108,80 @@
             right: 15%;
             animation-delay: .3s;
         }
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.scene{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #1F1B70;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene i{
+    position: absolute;
+    top: -250px;
+    background: rgba(255,255,255, 0.5);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+}
     </style>
 </head>
 <body>
-    <h1>Astronomy Curiosity</h1>
-    <div class="wrapper">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
+  
+        <div class="scene">
+            <h1>Astronomy Curiosity</h1>
+            
+        
+        </div>
+        <div class="wrapper">
+            <div class="circle" id="terra"></div>
+            <div class="circle" id="marte"></div>
+            <div class="circle" id="jupiter"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
     </div>
+        <script>
+            function stars(){
+                let count = 150;
+                let scene = document.querySelector('.scene');
+                let i =0;
+                while(i < count){
+                    let star = document.createElement('i');
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let duration = Math.random() * 1;
+                    let h = Math.random() * 100;
+        
+                    star.style.left = x + 'px';
+                    star.style.width = 1 + 'px';
+                    star.style.height = 60 + 'px';
+                    star.style.animationDuration = duration + 's';
+                    
+                    scene.appendChild(star);
+                    i++;
+                }
+            }
+            stars();
+        </script>
+    
+
+    
 </body>
+
 </html>
+	

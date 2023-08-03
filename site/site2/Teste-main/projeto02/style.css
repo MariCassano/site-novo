@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --cor01:#1F1B70;
+    --cor02:#8883F2;
+    --cor03:#443AF0;
+    --cor04:#464370;
+    --cor05:#342DBD;
+
+    --fonte01:"rhuma sinera";
+    --font02:'Open Sans', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@font-face {
+    font-family: "rhuma sinera";
+    src: url(fontes/Rhuma\ Sinera\ Shadow.ttf);
+    src: url(fontes/Rhuma\ Sinera\ Inline.ttf);
+    src: url(fontes/Rhuma\ Sinera\ Regular.ttf);
+}
+body{
+    background-color:var(--cor03);
+}
+header{
+    min-height: 200px;
+    width: 100vw;
+    background-color:var(--cor05);
+}
+h1{
+    color: var(--cor02);
+    font-size: 80px;
+    text-align: justify;
+    text-align:center;
+    text-shadow: 1px 1px 34px 1px var(--cor04);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: var(--fonte01);    
+}
+nav >ul >a{
+    display:inline-block;
+    color: aliceblue;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: var(--font02);
+    box-shadow:1px 1px 3px 1px #1F1B70;
+}
+a:hover{
+    background: aliceblue;
+    color: var(--cor03);
+    border-radius: 20px;
+}
+main{
+    background-color: lightyellow;
+    margin: 50px;
+    margin-bottom: 0px;
+    font-family: var(--font01);
+    text-align: center;
+    border-radius: 40px;
+}
+ul > a{
+    padding: 30px;
+    
+    letter-spacing: 0.1px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 5px 0px 7px 2px;
+  
+
+}
+p{
+    text-align: justify;
+    padding: 30px;
+}
+aside{
+    margin: auto;
+}
+.img{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.wrap {
+    margin-top: 300px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    border-top: solid 3px #999 #1F1B70;
+    border-bottom: solid 3px ;
+    background-image: linear-gradient(135deg, #1F1B70 25%, #443AF0 25%,
+    #443AF0 50%, #443AF0 50%, #443AF0 75%, #443AF0 75%, #443AF0 100%);
+    background-size: 80px 80px;
+    animation: bganim 3s linear 2s infinite;
+}
+@keyframes bganim {
+    from { background-position: 0px; }
+    to { background-position: 80px; }
+}
+.cube {
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+}
+.cube div {
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background-image:url(/home/escola/Documentos/site/site2/STSCI-H-p2016-slideshow-2400x1200.png);
+    border: solid 1px #eee;
+    color: #ffffff;
+    font: 12px verdana;
+    text-align: center;
+    transition: transform 0.2s ease-in;
+}
+.cube div:hover {
+    background-color: rgb(0, 255, 251);
+    border-radius: 50%;
+}
+.front {
+    transform: translateZ(100px);
+}
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+}
+.top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+}
+.bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+}
+.cube {
+    animation: rotate 20s infinite linear;
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.wrap:hover .front {
+    transform: translateZ(200px);
+}
+.wrap:hover .back {
+    transform: translateZ(-200px) rotateY(180deg);
+}
+.wrap:hover .right {
+    transform: rotateY(-270deg) translateZ(100px)
+    translateX(100px);
+}
+.wrap:hover .left {
+    transform: rotateY(270deg) translateZ(100px)
+    translateX(-100px);
+}
+.wrap:hover .top {
+    transform: rotateX(-270deg) translateZ(100px)
+    translateY(-100px);
+}
+.wrap:hover .bottom {
+    transform: rotateX(270deg) translateZ(100px)
+    translateY(100px);
+}
+footer{
+    padding: 200px;
+    background-color: rgb(255, 255, 255);
+}

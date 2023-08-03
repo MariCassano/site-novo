@@ -13,11 +13,11 @@
   --cor01:
 }
 body{
-    background-image: linear-gradient(#100C0D,#0C0C0C,#420e00,#ca4300,#A73B1E);
+    background-color: #1F1B70;
 
 }
 .img{
-    background-image: url(STSCI-H-p1821a-slideshow-2400x1200.jpg);
+
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -28,11 +28,6 @@ body{
 }
 div{
     box-shadow: 5px 5px 6px 2px gray;
-}
-header{
-    padding: 46vh;
-    background-image: url(STSCI-H-p2016-slideshow-2400x1200.png);
-   
 }
 h1{
     color: rgb(255, 169, 129);
@@ -45,8 +40,6 @@ main{
     background-color: lightyellow;
     margin: 200px;
     margin-bottom: 0px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
     font-family: var(--font01);
     text-align: center;
 }
